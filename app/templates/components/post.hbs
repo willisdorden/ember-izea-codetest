@@ -1,0 +1,12 @@
+{{!-- Iterated post --}}
+<div data-test-post-action-container class="post" role="button" {{action "toggleSidePanel"}}>
+    <h1>
+      {{post.title}}
+    </h1>
+</div>
+
+
+{{!-- Side Panel --}}
+{{#if this.sidePanelActive}}
+    <SidePanel @post={{post}}  @toggleSidePanelOut={{action "toggleSidePanelOut"}} />
+{{/if}}

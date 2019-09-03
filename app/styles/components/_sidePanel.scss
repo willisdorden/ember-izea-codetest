@@ -17,11 +17,13 @@
   animation-iteration-count: 1;
   animation: slideIn 0.4s normal forwards ease-in-out;
   color: $primaryTextColor;
-
+  .postInfo {
+    margin-top: 70px
+  }
   .close {
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 60px;
     font-size: 1.4rem;
     border-radius: 4px;
     padding: 0px 5px;

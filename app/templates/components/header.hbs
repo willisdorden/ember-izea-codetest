@@ -6,6 +6,13 @@
             </div>
         </div>
         <div class="nav-links">
+            {{#link-to "users" class="nav-users" }}
+                <a
+                onClick="document.location.assign('/users')"
+                class="loadUsers" data-test-nav-users-a>
+                    Authors
+                </a>
+            {{/link-to}}
           {{#link-to "posts" class="nav-posts"}}
               <a
                       onClick="document.location.assign('/posts')"
@@ -13,7 +20,7 @@
                   Posts
               </a>
           {{/link-to}}
-            <a href="//github.io/jo_geek" target="_blank">User</a>
+
         </div>
     </div>
 </div>

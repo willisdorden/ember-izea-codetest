@@ -6,5 +6,5 @@ export default Route.extend({
 
     return store.findAll('post')
 
-  }
+  },
 });

@@ -1,0 +1,74 @@
+#userSidePanel {
+  background: #fff;
+  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  pointer-events: auto;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  transform: translate(100%);
+
+  animation-iteration-count: 1;
+  animation: slideIn 0.4s normal forwards ease-in-out;
+  color: $primaryTextColor;
+
+  .userInfo {
+    margin-top: 70px
+  }
+  .close {
+    position: absolute;
+    left: 15px;
+    top: 60px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    padding: 0px 5px;
+    cursor: pointer;
+    background-color: $primaryAccent;
+    color: #fff;
+
+    &:hover {
+      background-color: $secondaryAccent;
+    }
+  }
+}
+#userSidePanel .address {
+  border: solid 1px $primaryTextColor;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+#userSidePanel .user {
+  border: solid 1px $primaryTextColor;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.panel-is-sliding-out #userSidePanel {
+  animation: slideOut 0.4s normal forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}

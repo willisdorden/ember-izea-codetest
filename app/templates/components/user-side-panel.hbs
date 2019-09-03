@@ -1,0 +1,34 @@
+<div id="userSidePanel">
+    <div class="userInfo">
+        <h2 data-test-side-panel-title >{{user.name}} info</h2>
+    </div>
+
+    <div class="address">
+        <h2 data-test-side-panel-address>Street Address: {{user.address.street}}</h2>
+        <h2 data-test-side-panel-suite>Suite: {{user.address.suite}}</h2>
+        <h2 data-test-side-panel-city>City: {{user.address.city}}</h2>
+        <h2 data-test-side-panel-zipcode>Zip Code: {{user.address.zipcode}}</h2>
+    </div>
+    <div class="user">
+        <h2 data-test-side-panel-user >Written by: @{{user.username}}</h2>
+
+        <p data-test-side-panel-user-intro >
+            <strong>@{{user.username}}</strong> ({{user.name}}) works at <strong>{{user.company.name}}</strong>
+            <strong>(Company's Catch Phrase is: {{user.company.catchPhrase}})</strong>.
+        </p>
+
+        <p data-test-side-panel-user-contact >
+            You can reach the author at
+            <a href="tel:{{user.phone}}">{{user.phone}}</a> or
+            <a href="mailto:{{user.email}}">{{user.email}}</a>.
+        </p>
+
+        <p data-test-side-panel-user-site >
+            To read more from
+            <strong>@{{user.username}}</strong> you can visit <a href={{user.website}}>{{user.website}}</a>
+        </p>
+    </div>
+    <span data-test-side-panel-close class="close" role="button" {{action "toggleSidePanelOut"}} >
+    &times;
+  </span>
+</div>

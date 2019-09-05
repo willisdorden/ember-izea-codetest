@@ -1,0 +1,12 @@
+
+<div class="container">
+    <h1 data-test-title>Authors</h1>
+    <div id="usersContainer">
+  {{#user-pagination source = model as |users|}}
+    {{#each users as |user|}}
+        <User data-test-post-container @user={{user}} />
+    {{/each}}
+  {{/user-pagination}}
+    </div>
+</div>
+

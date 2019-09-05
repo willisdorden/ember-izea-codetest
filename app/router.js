@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('posts', function() {
     this.route('post');
   });
+  this.route('users');
 });
 
 export default Router;

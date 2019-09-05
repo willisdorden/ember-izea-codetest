@@ -1,4 +1,4 @@
-#sidePanel {
+#userSidePanel {
   background: #fff;
   box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -18,11 +18,10 @@
   animation: slideIn 0.4s normal forwards ease-in-out;
   color: $primaryTextColor;
 
-  .postInfo {
+  .userInfo {
     margin-top: 70px
   }
-
-  .close {
+  .userClose {
     position: absolute;
     left: 15px;
     top: 60px;
@@ -38,8 +37,21 @@
     }
   }
 }
+#userSidePanel .address {
+  border: solid 1px $primaryTextColor;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
 
-.panel-is-sliding-out #sidePanel {
+#userSidePanel .user {
+  border: solid 1px $primaryTextColor;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.panel-is-sliding-out #userSidePanel {
   animation: slideOut 0.4s normal forwards ease-in-out;
 }
 

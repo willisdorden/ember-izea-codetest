@@ -1,0 +1,19 @@
+{{yield paginatedUsers}}
+
+<div id="pagination">
+  {{#if canShowPrevious}}
+      <span data-test-prev-button role="button" {{action "goToPrevious"}}>&lt;</span>
+  {{else }}
+      <span class="disabled">&lt;</span>
+  {{/if}}
+
+  {{#each pageNumbers as |pageNumber|}}
+      <span role="button" {{action "goToPage" pageNumber}}>{{pageNumber}}</span>
+  {{/each}}
+
+  {{#if canShowNext}}
+      <span data-test-next-button role="button" {{action "goToNext" }}>&gt;</span>
+  {{else }}
+      <span class="disabled">&gt;</span>
+  {{/if}}
+</div>

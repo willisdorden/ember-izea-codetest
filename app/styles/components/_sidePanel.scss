@@ -7,7 +7,7 @@
   pointer-events: auto;
 
   position: fixed;
-  left: -300px;
+  right: 0;
   top: 0;
   width: 300px;
   height: 100%;
@@ -17,12 +17,14 @@
   animation-iteration-count: 1;
   animation: slideIn 0.4s normal forwards ease-in-out;
   color: $primaryTextColor;
+
   .postInfo {
     margin-top: 70px
   }
+
   .close {
     position: absolute;
-    right: 15px;
+    left: 15px;
     top: 60px;
     font-size: 1.4rem;
     border-radius: 4px;
@@ -36,24 +38,25 @@
     }
   }
 }
+
 .panel-is-sliding-out #sidePanel {
   animation: slideOut 0.4s normal forwards ease-in-out;
 }
 
 @keyframes slideIn {
   from {
-    transform: translate(0%);
+    transform: translate(100%);
   }
   to {
-    transform: translate(100%);
+    transform: translate(0%);
   }
 }
 
 @keyframes slideOut {
   from {
-    transform: translate(100%);
+    transform: translate(0%);
   }
   to {
-    transform: translate(0%);
+    transform: translate(100%);
   }
 }
